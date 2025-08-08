@@ -1,0 +1,41 @@
+.article-card {
+    background-color: white;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .article-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 51, 102, 0.3);
+    cursor: pointer;
+  }
+  
+  .article-card h3 {
+    color: #003366;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+  
+  .article-card button {
+    align-self: flex-start;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .article-card button:hover {
+    background-color: #0059b3;
+  }
+  

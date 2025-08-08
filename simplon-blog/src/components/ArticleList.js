@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ArticleCard from './ArticleCard';
+import './ArticleList.css';
 
 function ArticleList({ onSelect }) {
   const [articles, setArticles] = useState([]);
@@ -12,14 +13,17 @@ function ArticleList({ onSelect }) {
   }, []);
 
   return (
-    <div>
-      <h2>Liste des articles</h2>
-      {articles.map(article => (
-        <ArticleCard key={article.id} article={article} onSelect={onSelect} />
-      ))}
-      <button> Tous les articles </button>
+    <div className="article-list">
+      <h2>Articles Importants</h2>
+      <div className="articles-row">
+        {articles.map(article => (
+          <ArticleCard key={article.id} article={article} onSelect={onSelect} />
+        ))}
+      </div>
+      <button>Tous les articles</button>
     </div>
   );
 }
 
 export default ArticleList;
+

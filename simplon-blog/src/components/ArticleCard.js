@@ -3,9 +3,11 @@ import './ArticleCard.css';
 
 function ArticleCard({ article, onSelect }) {
   return (
-    <div style={{ marginBottom: '20px' }}>
+    <div className="article-card" onClick={() => onSelect(article)}>
       <h3>{article.title}</h3>
-      <button onClick={() => onSelect(article)}>Voir plus</button>
+      <button onClick={(e) => { e.stopPropagation(); onSelect(article); }}>
+        Voir plus
+      </button>
     </div>
   );
 }

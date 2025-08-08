@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ArticleForm.css';
 
 function NewArticleForm({ onAdd }) {
   const [title, setTitle] = useState('');
@@ -16,7 +17,7 @@ function NewArticleForm({ onAdd }) {
     const newArticle = {
       id: Date.now(),
       title,
-      body
+      body,
     };
 
     onAdd(newArticle);
@@ -26,20 +27,21 @@ function NewArticleForm({ onAdd }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="new-article-form" onSubmit={handleSubmit}>
       <h2>Ajouter un article</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="error">{error}</p>}
       <input
         type="text"
         placeholder="Titre"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-      /><br />
+      />
       <textarea
         placeholder="Contenu"
         value={body}
         onChange={(e) => setBody(e.target.value)}
-      /><br />
+        rows={6}
+      />
       <button type="submit">Publier</button>
     </form>
   );

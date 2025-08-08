@@ -1,0 +1,85 @@
+.header {
+    padding: 15px 30px;
+    background-color: #1E3A8A;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #93C5FD;
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: #1E3A8A;
+      width: 100%;
+      text-align: center;
+      transition: height 0.3s ease;
+    }
+  
+    .nav.active {
+      height: 150px;
+      padding: 15px 0;
+    }
+  
+    .burger {
+      display: block;
+    }
+  
+    /* Animation burger */
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .toggle .line2 {
+      opacity: 0;
+    }
+  
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+  

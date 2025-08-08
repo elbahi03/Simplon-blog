@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Hero.css';
 
 function Hero() {
   const navigate = useNavigate();
@@ -9,17 +10,16 @@ function Hero() {
   };
 
   return (
-    <div className="hero" style={{ padding: '40px', backgroundColor: '#eee', textAlign: 'center' }}>
+    <section className="hero">
       <div className="hero-content">
         <h1>SimplonBlog</h1>
         <p>Explorez. Partagez. Inspirez le monde avec vos mots.</p>
-        <button onClick={lesarticles} style={{ padding: '10px 20px', cursor: 'pointer' }}>
+        <button onClick={lesarticles}>
           Commencer à lire
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
 export default Hero;
-

@@ -5,7 +5,8 @@ import Footer from './components/Footer';
 import LesArticles from './pages/lesarticles';
 import Creer from './pages/creer';            
 import Apropos from './pages/apropos';         
-import Acceuil from './pages/acceuil';        
+import Acceuil from './pages/acceuil';
+import './App.css';      
 
 function App() {
   const [articles, setArticles] = useState([]);

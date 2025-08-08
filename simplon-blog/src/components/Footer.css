@@ -1,0 +1,22 @@
+#footer {
+    padding: 20px;
+    background-color: #003366; /* bleu foncé */
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  #footer p {
+    margin: 6px 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    #footer {
+      font-size: 0.8rem;
+      padding: 15px 10px;
+    }
+  }
+  

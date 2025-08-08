@@ -1,0 +1,21 @@
+.article-list {
+    padding: 30px 20px;
+    background-color: #f8faff; /* très clair, presque blanc bleuté */
+    color: #003366; /* bleu foncé */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .article-list h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  

@@ -1,0 +1,50 @@
+.article-list {
+    padding: 100px 60px;
+    background-color: #f8faff;
+    color: #003366;
+    max-width: 900px;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
+  
+  .article-list h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .articles-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  .articles-row::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .articles-row::-webkit-scrollbar-thumb {
+    background-color: #003366;
+    border-radius: 4px;
+  }
+  
+  .article-list > button {
+    display: block;
+    margin: 25px auto;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .article-list > button:hover {
+    background-color: #0059b3;
+  }
+  
