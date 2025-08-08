@@ -1,4 +1,5 @@
 import React from 'react';
+import './ArticleAjoute.css';
 
 function AddedArticles({ articles, onSelect }) {
   if (articles.length === 0) return null;

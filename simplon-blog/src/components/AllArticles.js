@@ -1,6 +1,6 @@
-// src/components/ArticleList.js
 import React, { useState, useEffect } from 'react';
 import ArticleCard from './ArticleCard';
+import './AllArticles.css';
 
 
 function ArticleList({ onSelect }) {
@@ -14,11 +14,13 @@ function ArticleList({ onSelect }) {
   }, []);
 
   return (
-    <div>
+    <div className="article-list">
       <h2>Liste des articles</h2>
-      {articles.map(article => (
-        <ArticleCard key={article.id} article={article} onSelect={onSelect} />
-      ))}
+      <div className="articles-grid">
+        {articles.map(article => (
+          <ArticleCard key={article.id} article={article} onSelect={onSelect} />
+        ))}
+      </div>
     </div>
   );
 }

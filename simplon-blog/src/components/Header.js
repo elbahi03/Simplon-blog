@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,12 +9,12 @@ function Header() {
       </h1>
 
       <nav style={{ display: 'flex', gap: '20px' }}>
-        <Link to="/" style={{ textDecoration: 'none', color: '#333' }}>Les articles</Link>
         <Link to="/creer" style={{ textDecoration: 'none', color: '#333' }}>Créer</Link>
+        <Link to="/lesarticles" style={{ textDecoration: 'none', color: '#333' }}>Les articles</Link>
         <Link to="/apropos" style={{ textDecoration: 'none', color: '#333' }}>À propos</Link>
       </nav>
     </header>
   );
 }
 
-export default Header;
+export default Header; 

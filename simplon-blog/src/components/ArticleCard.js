@@ -1,4 +1,5 @@
 import React from 'react';
+import './ArticleCard.css';
 
 function ArticleCard({ article, onSelect }) {
   return (
