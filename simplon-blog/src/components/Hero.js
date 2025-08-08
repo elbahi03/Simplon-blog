@@ -6,7 +6,7 @@ function Hero() {
       <div className="hero-content">
         <h1>SimplonBlog</h1>
         <p>Explorez. Partagez. Inspirez le monde avec vos mots.</p>
-        <button>Commencer</button>
+        <button>Commencer a lire</button>
       </div>
     </div>
   );

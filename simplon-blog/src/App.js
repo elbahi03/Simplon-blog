@@ -1,39 +1,30 @@
 import React, { useState } from 'react';
-import ArticleList from './components/ArticleList';
-import ArticleDetail from './components/ArticleDetail';
-import ArticleForm from './components/ArticleForm';
-import ArticleAjoute from './components/ArticleAjoute';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import LesArticles from './pages/lesarticles';
+import Creer from './pages/creer';
+import Apropos from './pages/apropos';
+
 function App() {
-  const [selectedArticle, setSelectedArticle] = useState(null);
   const [articles, setArticles] = useState([]);
-  const handleSelect = (article) => setSelectedArticle(article);
-  const handleBack = () => setSelectedArticle(null);
-  const handleAddArticle = (article) => {
-    setArticles([article, ...articles]);
-    setSelectedArticle(null);
+
+  const addArticle = (newArticle) => {
+    setArticles(prev => [newArticle, ...prev]);
   };
 
   return (
-    <div className="App">
+    <>
       <Header />
-      <main style={{ padding: "20px" }}>
-        <h1>📝 SimplonBlog</h1>
-
-        <ArticleForm onAdd={handleAddArticle} />
-
-        {selectedArticle ? (
-          <ArticleDetail article={selectedArticle} onBack={handleBack} />
-        ) : (
-          <>
-            <ArticleList onSelect={handleSelect} />
-            <ArticleAjoute articles={articles} onSelect={handleSelect} />
-          </>
-        )}
+      <main style={{ padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<LesArticles articles={articles} />} />
+          <Route path="/creer" element={<Creer addArticle={addArticle} />} />
+          <Route path="/apropos" element={<Apropos />} />
+        </Routes>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
