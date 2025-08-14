@@ -31,7 +31,7 @@
   border-radius: 4px;
 }
 
-.article-list>button {
+.article-list > button {
   display: block;
   margin: 25px auto;
   background-color: #003366;
@@ -44,11 +44,11 @@
   transition: background-color 0.3s ease;
 }
 
-.article-list>button:hover {
+.article-list > button:hover {
   background-color: #0059b3;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .articles-row {
     display: flex;
     flex-wrap: wrap;
